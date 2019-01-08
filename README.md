@@ -1,39 +1,43 @@
 ## Flutter版微信 
  
-**下面是效果图,分别是安卓和IOS的.**
+**下面是效果图 **
 
 <br>
-首页(Android、IOS)：
+首页 & 通讯录
 <table>
 <tr>
-<th><img src="https://user-gold-cdn.xitu.io/2018/6/8/163de752ff723b4c?w=442&h=790&f=jpeg&s=57332"></th>
-<th><img src="https://user-gold-cdn.xitu.io/2018/6/8/163de7537706d5e5?w=418&h=821&f=jpeg&s=57229"></th>
+<th><img src="https://upload-images.jianshu.io/upload_images/1091358-cdae6c8c1389758f.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/400"></th>
+<th><img src="https://upload-images.jianshu.io/upload_images/1091358-02e8ca2987649d68.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/400"></th>
 </tr>
-</table>
 
-通讯录(Android、IOS):
+</table>
+ 
+ 
+<br>
+## 发现 & 我的 
 
 <table>
 <tr>
-<th><img src="https://user-gold-cdn.xitu.io/2018/6/12/163f21eaf0ee7538?w=411&h=734&f=jpeg&s=41106"></th>
-<th><img src="https://user-gold-cdn.xitu.io/2018/6/12/163f21e658b6dfa4?w=368&h=723&f=jpeg&s=40160"></th>
+<th> <img src="https://upload-images.jianshu.io/upload_images/1091358-5125ad7487276146.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/400">
+ </th>
+<th>
+
+<img src="https://upload-images.jianshu.io/upload_images/1091358-1a848774baf04d74.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/400">
+
+</th> 
+ 
 </tr>
-</table>
 
-发现页面(Android、IOS)：
 
-<table>
-<tr>
-<th><img src="https://user-gold-cdn.xitu.io/2018/6/11/163ee28aa0930cab?w=432&h=772&f=jpeg&s=40734"></th>
-<th><img src="https://user-gold-cdn.xitu.io/2018/6/11/163ee29c0cc75e1d?w=407&h=800&f=jpeg&s=35099"></th>
-</tr>
-</table>
+</table> 
 
-我的页面(Android、IOS)：
+<br>
+## 支付
 
 <table>
+
 <tr>
-<th><img src="https://user-gold-cdn.xitu.io/2018/6/11/163ee2a43e66a3d2?w=432&h=772&f=jpeg&s=40031"></th>
-<th><img src="https://user-gold-cdn.xitu.io/2018/6/11/163ee2aa578486c8?w=407&h=800&f=jpeg&s=33753"></th>
+<th><img src="https://upload-images.jianshu.io/upload_images/1091358-8e6d6d0834792b63.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/400">
+</th>  
 </tr>
 </table>
