@@ -31,7 +31,7 @@ class _MInfoVCState extends State<MInfoVC>{
               height: 45.0,
               child: new ListTile(
                 title: new Text("名字"),
-                trailing: new Text("Tony"),
+                trailing: new Text("共田君"),
               ),
             ),
           ),
@@ -40,7 +40,7 @@ class _MInfoVCState extends State<MInfoVC>{
             height: 45.0,
             child: new ListTile(
               title: new Text("微信号"),
-              trailing: new Text("tony001"),
+              trailing: new Text("haugnbo"),
             ),
           ),
           new Container(

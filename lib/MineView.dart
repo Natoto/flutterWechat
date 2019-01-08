@@ -17,9 +17,9 @@ class _MineViewState extends State{
             child: new Container(
               height: 80.0,
               child: new ListTile(
-                leading: new Image.asset("images/xk.jpg"),
-                title: new Text("Tony"),
-                subtitle: new Text("微信号：ty001"),
+                leading: new Image.asset("assets/haugnbo.png",width: 50.0,height: 50.0,),
+                title: new Text("共田君"),
+                subtitle: new Text("微信号：haugnbo"),
                 trailing: new Icon(Icons.fullscreen),
                 onTap: (){
                   Navigator.of(context).push(

@@ -33,6 +33,15 @@ flutter:
       - images/a003.jpg
       - images/a004.jpg
       - images/a005.jpg
+      - assets/tabbar_contacts@3x.png
+      - assets/tabbar_contactsHL@3x.png
+      - assets/tabbar_discover@3x.png
+      - assets/tabbar_discoverHL@3x.png
+      - assets/tabbar_mainframe@3x.png
+      - assets/tabbar_mainframeHL@3x.png
+      - assets/tabbar_me@3x.png
+      - assets/tabbar_meHL@3x.png
+      - assets/haugnbo.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
