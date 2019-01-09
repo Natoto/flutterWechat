@@ -42,6 +42,16 @@ flutter:
       - assets/tabbar_me@3x.png
       - assets/tabbar_meHL@3x.png
       - assets/haugnbo.png
+      - wechatassts/ff_IconShowAlbum@3x.png
+      - wechatassts/ff_IconQRCode@3x.png
+      - wechatassts/ff_IconShake@3x.png
+      - wechatassts/ff_IconBrowse1@3x.png
+      - wechatassts/ff_IconSearch1@3x.png
+      - wechatassts/ff_IconBottle@3x.png
+      - wechatassts/ff_IconNearby@3x.png
+      - wechatassts/GameCenterH5GameMenuBtn@2x.png
+      - wechatassts/PaidDetail_MiniProgram@3x.png
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
