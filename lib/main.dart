@@ -24,6 +24,30 @@ class myApp extends StatelessWidget {
   }
 }
 
+class MAppBar extends StatefulWidget implements PreferredSizeWidget {
+  MAppBar({@required this.child}) : assert(child != null);
+  final Widget child;
+  @override
+  Size get preferredSize {
+    return new Size.fromHeight(51.0);
+  }
+
+  @override
+  State createState() {
+    return new MAppBarState();
+  }
+}
+
+class MAppBarState extends State<MAppBar> {
+  @override
+  Widget build(BuildContext context) {
+    return new SafeArea(
+      top: true,
+      child: widget.child,
+    );
+  }
+}
+
 class RandomWords extends StatefulWidget {
   @override
   createState() => new RandomWordsState();
@@ -74,13 +98,38 @@ class RandomWordsState extends State<RandomWords> {
     new FindView(),
     new MineView()
   ];
-  int _sindex = 0;
+  int _sindex = 2;
   String _title = "微信";
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        // child: new Column(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: <Widget>[
+        //     Container(
+        //       height: 13,
+        //       color: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
+        //     ),
+        //     Container(
+        //       width: 1000,
+        //       color: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
+        //       child: new Text(
+        //         "发现",
+        //         style: TextStyle(
+        //           color: Colors.black,
+        //           fontSize: 17,
+        //           fontWeight: FontWeight.w500,
+        //         ),
+        //         textAlign: TextAlign.center,
+        //       ),
+        //     ),
+        //     Container(
+        //         height: 14, color: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2)),
+        //   ],
+        // ),
+  
         backgroundColor: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
         elevation: 0.0,
         title: new Text(_title),
@@ -89,7 +138,7 @@ class RandomWordsState extends State<RandomWords> {
             icon: new Icon(Icons.list),
 
             onPressed: () {
-              print("点击了");
+              print("点击了-index");
             },
           ),
         ],

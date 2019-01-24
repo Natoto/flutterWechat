@@ -116,7 +116,7 @@ class _HomeViewState extends State{
             );
           },
           leading: new Image.asset("images/a004.jpg",width: 40.0,height: 40.0,fit: BoxFit.cover,),
-          title: new Text("老板"),
+          title: new Text("大哒哒哒哒老板"),
           subtitle: new Text("【微信红包，大吉大利】"),
           trailing: new Text("那年今日"),
         ),

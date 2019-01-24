@@ -1,55 +1,114 @@
 import 'package:flutter/material.dart';
-class FindView extends StatefulWidget{
+import 'dart:ui';
+import 'scanVC.dart';
+
+class FindView extends StatefulWidget {
   @override
   _FindViewState createState() => new _FindViewState();
 }
-class _FindViewState extends State{
+
+class _FindViewState extends State {
   @override
-  Container _FindCell(String iconName,String contentName,Color color,double topY) {
+  Container _FindCell(String iconName, String contentName, Color color,
+      double topY, double lineH) {
     return new Container(
-    padding:EdgeInsets.only(top:topY),
-    child: new Container(
-    height: 56.0,
-    child: new ListTile(
-    leading: new Image.asset(
-                iconName,
-                height: 40,
-                width: 40,
-               // color: color,
+      padding: EdgeInsets.only(top: topY),
+      color: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
+      // height: 54.0 + topY + lineH ,
+      child: new Column(
+        children: <Widget>[
+          Container(
+            height: 54.0 + lineH,
+            color: Colors.white,
+            child: new Row(
+                // mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Container(width: 17),
+                  new Image.asset(
+                    iconName,
+                    height: 22.0,
+                    width: 22,
+                    // color: color,
+                  ),
+                  Container(width: 17),
+                  new Text(
+                    contentName,
+                    style: const TextStyle(
+                      fontSize: 17.0,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  )
+                ]),
+          ),
+          Container(
+            height: lineH,
+            child: new Row(
+              children: <Widget>[
+                Container(
+                  width: 60,
+                  color: Colors.white,
+                ),
+                Container(
+                  color: Color.fromARGB(0x7d, 0xd9, 0xd9, 0xd9),
+                  width: window.physicalSize.width / 3 - 60,
+                )
+              ],
             ),
-    title: new Text(contentName),
-    ),
-    color: Colors.white,
-    ),
-    color: Colors.grey[200],
+            // padding: EdgeInsets.all(100),
+          ),
+        ],
+      ),
     );
   }
 
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
-      backgroundColor: Colors.green,
-      body: new ListView(
+        backgroundColor: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
+        body: new ListView(
           children: <Widget>[
-          _FindCell("wechatassts/ff_IconShowAlbum@3x.png", "朋友圈", Colors.red,0.0),
+            new GestureDetector(
+              onTap: () {
+                print("点朋友圈Cell");
+              },
+              child: _FindCell("wechatassts/ff_IconShowAlbum@3x.png", "朋友圈",
+                  Colors.red, 0.0, 0),
+            ),
+
+            new GestureDetector(
+              onTap: () {
+                print("点了扫一扫");
+              },
+              child: _FindCell("wechatassts/ff_IconQRCode@3x.png", "扫一扫",
+                  Colors.red, 9.0, 0.5),
+            ),
+
+            _FindCell(
+                "wechatassts/ff_IconShake@3x.png", "摇一摇", Colors.red, 0, 0),
+            _FindCell("wechatassts/ff_IconBrowse1@3x.png", "看一看", Colors.red,
+                9.0, 0.5),
+            _FindCell(
+                "wechatassts/ff_IconSearch1@3x.png", "搜一搜", Colors.red, 0, 0),
+            _FindCell(
+                "wechatassts/ff_IconNearby@3x.png", "附近的人", Colors.red, 9, 0.5),
+            _FindCell(
+                "wechatassts/ff_IconBottle@3x.png", "漂流瓶", Colors.red, 0, 0.5),
+            _FindCell(
+                "wechatassts/ff_IconQRCode@3x.png", "附近的餐厅", Colors.red, 0, 0),
+            _FindCell(
+                "wechatassts/ff_IconQRCode@3x.png", "购物", Colors.red, 9, 0.5),
+            _FindCell("wechatassts/GameCenterH5GameMenuBtn@2x.png", "游戏",
+                Colors.red, 0, 0),
+            _FindCell("wechatassts/PaidDetail_MiniProgram@3x.png", "小程序",
+                Colors.red, 9, 0),
+
+            // _FindCell("wechatassts/ff_IconShowAlbum@3x.png", "朋友圈", Colors.red,
+            // 0.0, 0),
+            // _FindCell("wechatassts/ff_IconQRCode@3x.png", "扫一扫", Colors.red,
+            //     9.0, 0.5),
+
+            /*
           
-          _FindCell("wechatassts/ff_IconQRCode@3x.png", "扫一扫", Colors.red,20.0),
-          _FindCell("wechatassts/ff_IconShake@3x.png", "摇一摇", Colors.red,0),
-
-          _FindCell("wechatassts/ff_IconBrowse1@3x.png", "看一看", Colors.red,20.0),
-          _FindCell("wechatassts/ff_IconSearch1@3x.png", "搜一搜", Colors.red,0),
-
-          _FindCell("wechatassts/ff_IconNearby@3x.png", "附近的人", Colors.red,20),
-          _FindCell("wechatassts/ff_IconBottle@3x.png", "漂流瓶", Colors.red,0),
-          _FindCell("wechatassts/ff_IconQRCode@3x.png", "附近的餐厅", Colors.red,0),
-
-          _FindCell("wechatassts/ff_IconQRCode@3x.png", "购物", Colors.red,20.0),
-          _FindCell("wechatassts/GameCenterH5GameMenuBtn@2x.png", "游戏", Colors.red,0),
-
-          _FindCell("wechatassts/PaidDetail_MiniProgram@3x.png", "小程序", Colors.red,20.0),
-
-          /*
-          new Container(
             padding:const EdgeInsets.only(top: 20.0),
             child: new Container(
               height: 50.0,
@@ -122,8 +181,7 @@ class _FindViewState extends State{
             color: Colors.grey[200],
           ),
           */
-        ],
-      )
-    );
+          ],
+        ));
   }
 }
