@@ -2,56 +2,38 @@
  
 **下面是效果图 **
  
-
-# 首页 
-
-<table>
-<tr>
-<th> 
-<img style="width:300px;height:660px" src="snapshoot/home.PNG"  alt="首页" align=center />
-</th>  
-</tr>
-</table>
-
  
 
-# 通讯录 
-
 <table>
 <tr>
 <th> 
-<img style="width:300px;height:660px" src="snapshoot/contacts.PNG"  alt="通讯录" align=center />
+<img  src="snapshoot/home.PNG"  alt="首页" align=center />
+</th>  
+
+<th> 
+<img src="snapshoot/contacts.PNG"  alt="通讯录" align=center />
 </th>  
 </tr>
 </table>
+
   
-## 发现 
  
 <table>
 <tr>
 <th> 
-<img style="width:300px;height:660px" src="snapshoot/find.PNG"  alt="发现" align=center /> 
+<img src="snapshoot/find.PNG"  alt="发现" align=center /> 
+</th>  
+
+<th> 
+<img src="snapshoot/me.PNG"  alt="我的" align=center /> 
 </th>  
 </tr>
 </table>
-
-
-## 我的  
 
  
-<table>
-<tr>
-<th> 
-<img style="width:300px;height:660px" src="snapshoot/me.PNG"  alt="我的" align=center /> 
-</th>  
-</tr>
-</table>
+ 
 
-
-</table> 
-
-<br>
-## 支付
+ 
 
 <table>
 
