@@ -1,43 +1,25 @@
-## Flutter版微信 
+## 高仿 Flutter版微信 7.0 
  
 **下面是效果图 **
-
-<br>
-首页 & 通讯录
-<table>
-<tr>
-<th><img src="https://upload-images.jianshu.io/upload_images/1091358-cdae6c8c1389758f.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/400"></th>
-<th><img src="https://upload-images.jianshu.io/upload_images/1091358-02e8ca2987649d68.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/400"></th>
-</tr>
-
-</table>
  
+
+# 首页 
+<img style="width:300px;height:660px" src="snapshoot/home.PNG"  alt="首页" align=center />
  
-<br>
-## 发现 & 我的 
 
-<table>
-<tr>
-<th> <img src="https://upload-images.jianshu.io/upload_images/1091358-5125ad7487276146.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/400">
- </th>
-<th>
+# 通讯录 
 
-<img src="https://upload-images.jianshu.io/upload_images/1091358-1a848774baf04d74.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/400">
-
-</th> 
+<img style="width:300px;height:660px" src="snapshoot/contacts.PNG"  alt="通讯录" align=center />
+  
+## 发现 
  
-</tr>
+<img style="width:300px;height:660px" src="snapshoot/find.PNG"  alt="发现" align=center /> 
 
+## 我的  
 
-</table> 
+<img style="width:300px;height:660px" src="snapshoot/me.PNG"  alt="我的" align=center /> 
 
-<br>
+ 
 ## 支付
-
-<table>
-
-<tr>
-<th><img src="https://upload-images.jianshu.io/upload_images/1091358-8e6d6d0834792b63.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/400">
-</th>  
-</tr>
-</table>
+ 
+ <img  style="width:300px;height:660px" src="https://upload-images.jianshu.io/upload_images/1091358-8e6d6d0834792b63.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/400">
