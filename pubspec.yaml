@@ -51,6 +51,10 @@ flutter:
       - wechatassts/ff_IconNearby@3x.png
       - wechatassts/GameCenterH5GameMenuBtn@2x.png
       - wechatassts/PaidDetail_MiniProgram@3x.png
+      - wechatassts/arrow_ico@3x.png
+      - wechatassts/AlbumHBSmallArror_Golden@2x.png
+      - wechatassts/Card_ArrowGrey@2x.png
+      - wechatassts/arrowOnclick_ico@2x.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

@@ -103,74 +103,65 @@ class RandomWordsState extends State<RandomWords> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        // child: new Column(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: <Widget>[
-        //     Container(
-        //       height: 13,
-        //       color: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
-        //     ),
-        //     Container(
-        //       width: 1000,
-        //       color: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
-        //       child: new Text(
-        //         "发现",
-        //         style: TextStyle(
-        //           color: Colors.black,
-        //           fontSize: 17,
-        //           fontWeight: FontWeight.w500,
-        //         ),
-        //         textAlign: TextAlign.center,
-        //       ),
-        //     ),
-        //     Container(
-        //         height: 14, color: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2)),
-        //   ],
-        // ),
-  
-        backgroundColor: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
-        elevation: 0.0,
-        title: new Text(_title),
-        actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.list),
-
-            onPressed: () {
-              print("点击了-index");
-            },
-          ),
-        ],
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: new ThemeData(
+        platform: TargetPlatform.iOS,
+        primaryColor: Colors.grey[100],
+        canvasColor: Color(0xFFFFFFFF),
       ),
-      bottomNavigationBar: new BottomNavigationBar(
-        items: listSet,
-        type: BottomNavigationBarType.fixed,
-        onTap: (int index) {
-          String title = "";
-          switch (index) {
-            case 0:
-              title = "微信";
-              break;
-            case 1:
-              title = "通讯录";
-              break;
-            case 2:
-              title = "发现";
-              break;
-            case 3:
-              title = "我";
-              break;
-          }
-          setState(() {
-            _sindex = index;
-            _title = title;
-          });
-          print("____$index");
-        },
-        currentIndex: _sindex,
-      ),
-      body: vcSet[_sindex],
+      home: buildHome(),
     );
+  }
+
+  Scaffold buildHome() {
+    return new Scaffold(
+
+    appBar: new AppBar(
+
+      backgroundColor: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
+      elevation: 0.0,
+      title: new Text(_title),
+      actions: <Widget>[
+        new IconButton(
+          icon: new Icon(Icons.list),
+
+          onPressed: () {
+            print("点击了-index");
+          },
+        ),
+      ],
+    ),
+    bottomNavigationBar: new BottomNavigationBar(
+      unselectedItemColor: Colors.grey,
+      selectedItemColor: Color.fromARGB(0xff, 0x26, 0x73, 0x25),
+      items: listSet,
+      type: BottomNavigationBarType.fixed,
+      onTap: (int index) {
+        String title = "";
+        switch (index) {
+          case 0:
+            title = "微信";
+            break;
+          case 1:
+            title = "通讯录";
+            break;
+          case 2:
+            title = "发现";
+            break;
+          case 3:
+            title = "我";
+            break;
+        }
+        setState(() {
+          _sindex = index;
+          _title = title;
+        });
+        print("____$index");
+      },
+      currentIndex: _sindex,
+    ),
+    body: vcSet[_sindex],
+  );
   }
 }

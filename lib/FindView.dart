@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'scanVC.dart';
-
+import 'WCAvatar.dart';
+import 'TimeLine/TimeLine.dart';
 class FindView extends StatefulWidget {
   @override
   _FindViewState createState() => new _FindViewState();
@@ -9,8 +10,8 @@ class FindView extends StatefulWidget {
 
 class _FindViewState extends State {
   @override
-  Container _FindCell(String iconName, String contentName, Color color,
-      double topY, double lineH) {
+  Container _FindNormalCell(String iconName, String contentName,
+      String timelinecontentName, Color color, double topY, double lineH) {
     return new Container(
       padding: EdgeInsets.only(top: topY),
       color: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
@@ -18,28 +19,35 @@ class _FindViewState extends State {
       child: new Column(
         children: <Widget>[
           Container(
-            height: 54.0 + lineH,
-            color: Colors.white,
-            child: new Row(
-                // mainAxisAlignment: MainAxisAlignment.start,
+              height: 54.0 + lineH,
+              color: Colors.white,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Container(width: 17),
-                  new Image.asset(
-                    iconName,
-                    height: 22.0,
-                    width: 22,
-                    // color: color,
-                  ),
-                  Container(width: 17),
-                  new Text(
-                    contentName,
-                    style: const TextStyle(
-                      fontSize: 17.0,
-                      fontWeight: FontWeight.w400,
+                  leftrow(iconName, contentName),
+                  Container(
+                    width: 80,
+                    height: 100,
+                    color: Colors.transparent,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        timelinecontentName.length > 0
+                            ? WCAvatar()
+                            : Container(),
+                        Image.asset(
+                          "wechatassts/arrowOnclick_ico@2x.png", //arrow_icon
+                          width: 20.0,
+                          height: 20.0,
+                        ),
+                        Container(
+                          width: 5.0,
+                        )
+                      ],
                     ),
-                  )
-                ]),
-          ),
+                  ),
+                ],
+              )),
           Container(
             height: lineH,
             child: new Row(
@@ -61,6 +69,39 @@ class _FindViewState extends State {
     );
   }
 
+  Container _FindTimeLineCell(String iconName, String contentName, Color color,
+      double topY, double lineH) {
+    return _FindNormalCell(
+        iconName, contentName, 'images/a001.jpg', color, topY, lineH);
+  }
+
+  Container _FindCell(String iconName, String contentName, Color color,
+      double topY, double lineH) {
+    return _FindNormalCell(iconName, contentName, '', color, topY, lineH);
+  }
+
+  Row leftrow(String iconName, String contentName) {
+    return new Row(
+        // mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Container(width: 17),
+          new Image.asset(
+            iconName,
+            height: 22.0,
+            width: 22,
+            // color: color,
+          ),
+          Container(width: 17),
+          new Text(
+            contentName,
+            style: const TextStyle(
+              fontSize: 17.0,
+              fontWeight: FontWeight.w400,
+            ),
+          )
+        ]);
+  }
+
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
@@ -70,9 +111,12 @@ class _FindViewState extends State {
             new GestureDetector(
               onTap: () {
                 print("点朋友圈Cell");
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context)=> new TimeLinePage(),
+                ));
               },
-              child: _FindCell("wechatassts/ff_IconShowAlbum@3x.png", "朋友圈",
-                  Colors.red, 0.0, 0),
+              child: _FindTimeLineCell("wechatassts/ff_IconShowAlbum@3x.png",
+                  "朋友圈", Colors.red, 0.0, 0),
             ),
 
             new GestureDetector(
